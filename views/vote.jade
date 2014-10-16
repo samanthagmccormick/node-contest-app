@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	h1 Most Emotional Time-Lapse Vimeo Ever
+
+	.container.center
+		h3 Vote on your favorite entry below!
+
+	.row
+		.col-lg-6.right
+			h2 #{video1.title}
+			p Votes: #{video1.votes}
+			a(href="/vote?#{video1.url}")
+				i.fa.fa-2x.fa-thumbs-o-up
+			h3: em Submitted by #{video1.name}
+			iframe(src="#{video1.url}", frameborder="0", width="300", height="181", allowfullscreen) 
+			p #{video1.description}
+
+		.col-lg-6.left
+			h2 #{video2.title}
+			p Votes: #{video2.votes}
+			a(href="/vote?#{video2.url}")
+				i.fa.fa-2x.fa-thumbs-o-up
+			h3: em Submitted by #{video2.name}
+			iframe(src="#{video2.url}", frameborder="0", width="300", height="181", allowfullscreen) 
+			p #{video2.description}

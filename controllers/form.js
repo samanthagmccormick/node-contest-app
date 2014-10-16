@@ -5,11 +5,11 @@ var formController = {
 		// This is where bodyParser gets used, to parse the data in the form
 		var data = req.body;
 
-		if (submissions.length < 4) {
+		if (submissions.length < 9) {
 			submissions.push(data);
-			res.redirect('/');
+			res.redirect('/view');
 		} else {
-			res.redirect('/');
+			res.redirect('/view');
 		}
 	}
 };

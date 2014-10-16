@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var _ = require('underscore');
 var indexController = require('./controllers/index.js');
 var formController = require('./controllers/form.js');
 
@@ -10,7 +11,9 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', indexController.index);
-app.get('/sorry', indexController.sorry);
+app.get('/view', indexController.view);
+app.get('/vote', indexController.vote);
+app.get('/voteSubmitted', indexController.voteSubmitted);
 
 app.post('/formSubmitted', formController.formSubmit);
 

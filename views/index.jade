@@ -2,19 +2,26 @@ extends layout
 
 block content
 	h1 Most Emotional Time-Lapse Vimeo Ever
-	h2 Submit your favorite video below!
+	h3 Submit your favorite video below!
 
-	.container.center
-		form(method="post", action="/formSubmitted")
-			input(type="text" name="name" placeholder="Name")
-			input(type="text" name="url" placeholder="Video URL")
-			input(type="text" name="title" placeholder="Title")
-			input(type="text" name="description" placeholder="Description")
-			input(type="submit")
-
-	.container.center
-		for submission in submissions
-			h2 #{submission.title}   
-			h3: em Submitted by #{submission.name}
-			iframe(src="#{submission.url}", frameborder="0", width="300", height="181", allowfullscreen) 
-			p #{submission.description}
+	.row
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+		.col-lg-6.col-md-6.col-sm-6.col-xs.6
+			if submissions.length < 9
+				form(method="post", action="/formSubmitted")
+					.form-group
+						input(type="text" name="name" class="form-control" placeholder="Name")
+					.form-group
+						input(type="text" name="url" class="form-control" placeholder="Video URL")
+					.form-group
+						input(type="text" name="title" class="form-control" placeholder="Title")
+					.form-group
+						input(type="text" name="description" class="form-control" placeholder="Description")
+					.form-group
+						input(type="submit" class="btn btn-success")
+			else
+				p We are no longer accepting entries!
+		.col-lg-3.col-md-3.col-sm-3.col-xs-3
+	.row
+		.col-lg-12.col-md-12.col-sm-12.col-xs-12
+			a(href="/vote") Want to vote?
