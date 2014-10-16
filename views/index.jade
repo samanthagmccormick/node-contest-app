@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	h1 Most Emotional Time-Lapse Vimeo Ever
+	h2 Submit your favorite video below!
+
+	.container.center
+		form(method="post", action="/formSubmitted")
+			input(type="text" name="name" placeholder="Name")
+			input(type="text" name="url" placeholder="Video URL")
+			input(type="text" name="title" placeholder="Title")
+			input(type="text" name="description" placeholder="Description")
+			input(type="submit")
+
+	.container.center
+		for submission in submissions
+			h2 #{submission.title}   
+			h3: em Submitted by #{submission.name}
+			iframe(src="#{submission.url}", frameborder="0", width="300", height="181", allowfullscreen) 
+			p #{submission.description}

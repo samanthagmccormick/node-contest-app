@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1 Most Emotional Time-Lapse Vimeo Ever
+
+	.container.center
+		h2.sorry Sorry, submissions are full. Please vote on your favorite entries below!
+
+	.container.center
+		for submission in submissions
+			h2 #{submission.title}   
+			h3: em Submitted by #{submission.name}
+			iframe(src="#{submission.url}", frameborder="0", width="300", height="181", allowfullscreen) 
+			p #{submission.description}

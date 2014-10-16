@@ -1,0 +1,28 @@
+body {
+	font-family: Helvetica;
+}
+
+/* Helper Classes */
+
+.center {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.right {
+	text-align: right;
+}
+
+.left {
+	text-align: left;
+}
+
+/* Tags */
+
+
+/* Custom */
+
+.sorry {
+	color: red;
+}
