@@ -1,6 +1,10 @@
 var submissions = require('../models/submissions.js');
 var _ = require('underscore');
 
-var video1 = submissions[0];
+var shuffled = _.shuffle(submissions);
+var video1 = shuffled[0];
+var video2 = shuffled[1];
 
-module.exports = video1;
+var videos = [video1, video2];
+
+module.exports = videos;
