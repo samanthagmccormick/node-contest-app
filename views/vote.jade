@@ -10,7 +10,7 @@ block content
 		.col-lg-6.right
 			h2 #{video1.title}
 			p Votes: #{video1.votes}
-			a(href="/vote?#{video1.url}")
+			a(href="/vote1")
 				i.fa.fa-2x.fa-thumbs-o-up
 			h3: em Submitted by #{video1.name}
 			iframe(src="#{video1.url}", frameborder="0", width="300", height="181", allowfullscreen) 
@@ -19,7 +19,7 @@ block content
 		.col-lg-6.left
 			h2 #{video2.title}
 			p Votes: #{video2.votes}
-			a(href="/vote?#{video2.url}")
+			a(href="/vote2")
 				i.fa.fa-2x.fa-thumbs-o-up
 			h3: em Submitted by #{video2.name}
 			iframe(src="#{video2.url}", frameborder="0", width="300", height="181", allowfullscreen) 
