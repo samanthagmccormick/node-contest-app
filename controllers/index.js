@@ -20,7 +20,7 @@ var indexController = {
 		});
 	},
 	vote1: function(req, res) {
-		videos[0].votes = video[0].votes+1;
+		videos[0].votes = videos[0].votes+1;
 
 		console.log("video1: ", videos[0].votes);
 		console.log("video2: ", videos[1].votes);
