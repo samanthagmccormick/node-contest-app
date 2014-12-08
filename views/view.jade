@@ -7,8 +7,9 @@ block content
 		h3 All Videos
 		a(href="/vote") Want to vote?
 
+	.container
 		for submission in submissions
-			h2 #{submission.title}
-			h3: em Submitted by #{submission.name}
-			iframe(src="#{submission.url}", frameborder="0", width="300", height="181", allowfullscreen) 
-			p #{submission.description}
+			.col-lg-4
+				iframe(src="#{submission.url}", frameborder="0", width="300", height="181", allowfullscreen) 
+				h3: em Submitted by #{submission.name}
+

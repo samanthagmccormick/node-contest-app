@@ -5,7 +5,6 @@ body {
 /* Helper Classes */
 
 .center {
-	max-width: 1000px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -22,16 +21,8 @@ body {
 	display: inline;
 }
 
-/* Tags */
-
-
 /* Custom */
 
 .sorry {
 	color: red;
 }
-
-/*#inlinebutton {
-	display: inline-block;
-	margin-left: 10px;
-}*/
